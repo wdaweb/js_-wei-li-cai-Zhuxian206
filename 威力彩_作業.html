@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document456</title>
+</head>
+
+<body>
+  <script>
+    const rand = (min, max) => {
+      return Math.round(Math.random() * (max - min)) + min
+    }
+
+    const groupA = []
+    for (let i = 0; i < 6; i++) {
+      const num = rand(1, 38)
+      if (groupA.includes(num)) {
+        i--
+      } else {
+        groupA.push(num)
+      }
+    }
+
+    const groupB = rand(1, 8)
+
+
+
+    document.write(groupA.join(', '))
+    document.write("<br>" + groupB)
+  </script>
+</body>
+
+</html>
